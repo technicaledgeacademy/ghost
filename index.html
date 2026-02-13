@@ -24,7 +24,6 @@
             line-height: 1.6;
         }
 
-        /* تحويل الحاوية لتكون متجاوبة مع المحتوى الطويل */
         .main-wrapper {
             max-width: 600px;
             margin: 40px auto;
@@ -52,7 +51,8 @@
         h1 { font-size: 1.8rem; line-height: 1.3; margin: 10px 0 20px; font-weight: 700; }
         h2 { font-size: 1.4rem; color: var(--primary-blue); margin-top: 40px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px; text-align: left; }
         
-        .description { color: var(--text-dim); font-size: 1rem; margin-bottom: 30px; text-align: left; }
+        .content-section { text-align: left; margin-top: 30px; }
+        .content-section p { color: var(--text-dim); font-size: 0.95rem; }
 
         .feature-box {
             background: rgba(255, 255, 255, 0.03);
@@ -66,10 +66,6 @@
         .feature-list { list-style: none; padding: 0; margin: 0; }
         .feature-list li { margin-bottom: 12px; font-size: 0.95rem; display: flex; align-items: center; color: #e0e6ed; }
         .feature-list li::before { content: "✓"; color: var(--accent-cyan); margin-right: 12px; font-weight: bold; }
-
-        /* الأقسام الجديدة */
-        .content-section { text-align: left; margin-top: 30px; }
-        .content-section p { color: var(--text-dim); font-size: 0.95rem; }
 
         .faq-item { background: rgba(0,0,0,0.2); padding: 15px; border-radius: 10px; margin-bottom: 15px; text-align: left; }
         .faq-item strong { color: var(--accent-cyan); display: block; margin-bottom: 5px; font-size: 0.9rem; }
@@ -86,7 +82,7 @@
             font-size: 1.1rem;
             transition: all 0.3s ease;
             box-shadow: 0 4px 15px rgba(58, 134, 255, 0.3);
-            margin: 40px 0;
+            margin: 40px 0; /* مسافة متوازنة بين الأقسام */
         }
 
         .cta-button:hover { transform: translateY(-2px); background: #2a6fdb; }
@@ -104,9 +100,9 @@
             <span class="logo-text">STRUCTURE ACADEMY</span>
             <h1>Study Market Structure & Price Action Theory</h1>
             
-            <div class="content-section"><h2>About Our Mission</h2>
-                <p>
-                    Structure Academy is a dedicated educational platform designed to decode the complexities of financial markets. We focus on teaching the "Why" behind price movements, empowering learners with institutional-grade market theory.
+            <div class="content-section">
+                <h2>About Our Mission</h2>
+                <p>Structure Academy is a dedicated educational platform designed to decode the complexities of financial markets. We focus on teaching the "Why" behind price movements, empowering learners with institutional-grade market theory.
                 </p>
             </div>
 
@@ -118,6 +114,8 @@
                     <li>Macro-Economic Data Discussion</li>
                 </ul>
             </div>
+
+            <a href="https://t.me/your_link" class="cta-button">JOIN THE LEARNING COMMUNITY</a>
 
             <div class="content-section">
                 <h2>Why Choose Our Community?</h2>
@@ -137,8 +135,6 @@
                     <p>You will explore technical analysis theories, how to read market structure, and how to interpret economic data independently.</p>
                 </div>
             </div>
-
-            <a href="https://t.me/your_link" class="cta-button">JOIN THE LEARNING COMMUNITY</a>
 
             <div class="footer">
                 <p class="risk-text">
