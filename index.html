@@ -54,6 +54,22 @@
         .content-section { text-align: left; margin-top: 30px; }
         .content-section p { color: var(--text-dim); font-size: 0.95rem; }
 
+        .cta-button {
+            display: block;
+            background: var(--primary-blue);
+            color: white;
+            text-decoration: none;
+            padding: 18px;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(58, 134, 255, 0.3);
+            margin: 30px 0; /* مسافة حول الزر */
+        }
+
+        .cta-button:hover { transform: translateY(-2px); background: #2a6fdb; }
+
         .feature-box {
             background: rgba(255, 255, 255, 0.03);
             border-radius: 12px;
@@ -70,22 +86,6 @@
         .faq-item { background: rgba(0,0,0,0.2); padding: 15px; border-radius: 10px; margin-bottom: 15px; text-align: left; }
         .faq-item strong { color: var(--accent-cyan); display: block; margin-bottom: 5px; font-size: 0.9rem; }
         .faq-item p { margin: 0; font-size: 0.85rem; color: #cbd5e0; }
-
-        .cta-button {
-            display: block;
-            background: var(--primary-blue);
-            color: white;
-            text-decoration: none;
-            padding: 18px;
-            border-radius: 10px;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(58, 134, 255, 0.3);
-            margin: 40px 0; /* مسافة متوازنة بين الأقسام */
-        }
-
-        .cta-button:hover { transform: translateY(-2px); background: #2a6fdb; }
 
         .footer { margin-top: 35px; padding-top: 25px; border-top: 1px solid rgba(255, 255, 255, 0.1); }
         .risk-text { font-size: 0.75rem; color: #bdc3c7; line-height: 1.6; text-align: justify; margin-bottom: 20px; }
@@ -106,6 +106,8 @@
                 </p>
             </div>
 
+            <a href="https://t.me/your_link" target="_blank" rel="noopener noreferrer" class="cta-button">JOIN THE LEARNING COMMUNITY</a>
+
             <div class="feature-box">
                 <ul class="feature-list">
                     <li>Institutional Price Action Theory</li>
@@ -114,8 +116,6 @@
                     <li>Macro-Economic Data Discussion</li>
                 </ul>
             </div>
-
-            <a href="https://t.me/your_link" class="cta-button">JOIN THE LEARNING COMMUNITY</a>
 
             <div class="content-section">
                 <h2>Why Choose Our Community?</h2>
