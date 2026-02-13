@@ -20,16 +20,18 @@
             color: var(--text-main);
             font-family: 'Inter', sans-serif;
             margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* تحويل الحاوية لتكون متجاوبة مع المحتوى الطويل */
+        .main-wrapper {
+            max-width: 600px;
+            margin: 40px auto;
             padding: 20px;
         }
 
         .container {
-            max-width: 480px;
-            width: 100%;
             background: var(--card-bg);
             padding: 40px 30px;
             border-radius: 20px;
@@ -47,129 +49,107 @@
             display: block;
         }
 
-        h1 {
-            font-size: 1.7rem;
-            line-height: 1.3;
-            margin: 10px 0 20px;
-            font-weight: 700;
-        }
-
-        .description {
-            color: var(--text-dim);
-            font-size: 0.95rem;
-            line-height: 1.6;
-            margin-bottom: 30px;
-        }
+        h1 { font-size: 1.8rem; line-height: 1.3; margin: 10px 0 20px; font-weight: 700; }
+        h2 { font-size: 1.4rem; color: var(--primary-blue); margin-top: 40px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px; text-align: left; }
+        
+        .description { color: var(--text-dim); font-size: 1rem; margin-bottom: 30px; text-align: left; }
 
         .feature-box {
             background: rgba(255, 255, 255, 0.03);
             border-radius: 12px;
             padding: 20px;
             text-align: left;
-            margin-bottom: 30px;
+            margin: 25px 0;
             border-left: 3px solid var(--primary-blue);
         }
 
-        .feature-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
+        .feature-list { list-style: none; padding: 0; margin: 0; }
+        .feature-list li { margin-bottom: 12px; font-size: 0.95rem; display: flex; align-items: center; color: #e0e6ed; }
+        .feature-list li::before { content: "✓"; color: var(--accent-cyan); margin-right: 12px; font-weight: bold; }
 
-        .feature-list li {
-            margin-bottom: 12px;
-            font-size: 0.9rem;
-            display: flex;
-            align-items: center;
-            color: #e0e6ed;
-        }
+        /* الأقسام الجديدة */
+        .content-section { text-align: left; margin-top: 30px; }
+        .content-section p { color: var(--text-dim); font-size: 0.95rem; }
 
-        .feature-list li::before {
-            content: "✓";
-            color: var(--accent-cyan);
-            margin-right: 12px;
-            font-weight: bold;
-        }
+        .faq-item { background: rgba(0,0,0,0.2); padding: 15px; border-radius: 10px; margin-bottom: 15px; text-align: left; }
+        .faq-item strong { color: var(--accent-cyan); display: block; margin-bottom: 5px; font-size: 0.9rem; }
+        .faq-item p { margin: 0; font-size: 0.85rem; color: #cbd5e0; }
 
         .cta-button {
             display: block;
             background: var(--primary-blue);
             color: white;
             text-decoration: none;
-            padding: 16px;
+            padding: 18px;
             border-radius: 10px;
             font-weight: 600;
-            font-size: 1rem;
+            font-size: 1.1rem;
             transition: all 0.3s ease;
             box-shadow: 0 4px 15px rgba(58, 134, 255, 0.3);
+            margin: 40px 0;
         }
 
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(58, 134, 255, 0.4);
-            background: #2a6fdb;
-        }
+        .cta-button:hover { transform: translateY(-2px); background: #2a6fdb; }
 
-        .footer {
-            margin-top: 35px;
-            padding-top: 25px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .risk-text {
-            font-size: 0.75rem;
-            color: #bdc3c7; /* لون واضح ومقروء للمراجعة */
-            line-height: 1.6;
-            text-align: justify;
-            margin-bottom: 20px;
-        }
-
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .footer-links a {
-            color: var(--primary-blue);
-            text-decoration: none;
-            font-size: 0.8rem;
-            font-weight: 500;
-        }
-
-        .footer-links a:hover {
-            text-decoration: underline;
-        }
+        .footer { margin-top: 35px; padding-top: 25px; border-top: 1px solid rgba(255, 255, 255, 0.1); }
+        .risk-text { font-size: 0.75rem; color: #bdc3c7; line-height: 1.6; text-align: justify; margin-bottom: 20px; }
+        .footer-links { display: flex; justify-content: center; gap: 20px; }
+        .footer-links a { color: var(--primary-blue); text-decoration: none; font-size: 0.8rem; font-weight: 500; }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <span class="logo-text">STRUCTURE ACADEMY</span>
-        <h1>Study Market Structure & Price Action Theory</h1>
-        
-        <p class="description">Explore advanced market mechanics and technical analysis concepts within our professional educational community.
-        </p>
-
-        <div class="feature-box">
-            <ul class="feature-list">
-                <li>Institutional Price Action Theory</li>
-                <li>Educational Case Studies on Market Data</li>
-                <li>Risk Management & Strategic Thinking</li>
-                <li>Macro-Economic Data Discussion</li>
-            </ul>
-        </div>
-
-        <a href="https://t.me/your_link" class="cta-button">JOIN THE LEARNING COMMUNITY</a>
-
-        <div class="footer">
-            <p class="risk-text">
-                <strong>Risk Warning:</strong> Trading financial instruments involves significant risk and may result in the loss of your invested capital. All materials provided are for <strong>educational purposes only</strong> and do not constitute financial advice. This site is not affiliated with Meta Platforms, Inc.
-            </p>
+    <div class="main-wrapper">
+        <div class="container">
+            <span class="logo-text">STRUCTURE ACADEMY</span>
+            <h1>Study Market Structure & Price Action Theory</h1>
             
-            <div class="footer-links">
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="terms.html">Terms of Service</a>
+            <div class="content-section"><h2>About Our Mission</h2>
+                <p>
+                    Structure Academy is a dedicated educational platform designed to decode the complexities of financial markets. We focus on teaching the "Why" behind price movements, empowering learners with institutional-grade market theory.
+                </p>
+            </div>
+
+            <div class="feature-box">
+                <ul class="feature-list">
+                    <li>Institutional Price Action Theory</li>
+                    <li>Educational Case Studies on Market Data</li>
+                    <li>Risk Management & Strategic Thinking</li>
+                    <li>Macro-Economic Data Discussion</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Why Choose Our Community?</h2>
+                <p>
+                    Unlike traditional signal groups, we prioritize logic and discipline. Our members explore the mechanics of market liquidity, structural shifts, and the psychological foundations of professional analysis.
+                </p>
+            </div>
+
+            <div class="content-section">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-item">
+                    <strong>Is this a financial advisory service?</strong>
+                    <p>No. We are a 100% educational academy. We do not provide trading signals, investment advice, or brokerage services.</p>
+                </div>
+                <div class="faq-item">
+                    <strong>What will I learn inside?</strong>
+                    <p>You will explore technical analysis theories, how to read market structure, and how to interpret economic data independently.</p>
+                </div>
+            </div>
+
+            <a href="https://t.me/your_link" class="cta-button">JOIN THE LEARNING COMMUNITY</a>
+
+            <div class="footer">
+                <p class="risk-text">
+                    <strong>Risk Warning:</strong> Trading financial instruments involves significant risk and may result in the loss of your invested capital. All materials provided are for <strong>educational purposes only</strong> and do not constitute financial advice. Past performance is not indicative of future results. This site is not affiliated with Meta Platforms, Inc.
+                </p>
+                
+                <div class="footer-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
             </div>
         </div>
     </div>
