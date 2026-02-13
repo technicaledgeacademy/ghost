@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Structure Academy | Educational Community</title>
+    <style>
+        body {
+            background-color: #0d1b2a;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 500px;
+            padding: 20px;
+            background: rgba(27, 38, 59, 0.8);
+            border-radius: 15px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+        h2 { color: #3a86ff; text-transform: uppercase; letter-spacing: 2px; font-size: 1.2rem; }
+        h1 { font-size: 1.8rem; margin: 15px 0; line-height: 1.4; }
+        p { color: #a2a2a2; font-size: 0.95rem; margin-bottom: 25px; }
+        .features {
+            text-align: left;
+            background: #1b263b;
+            padding: 20px;
+            border-left: 4px solid #3a86ff;
+            border-radius: 8px;
+            margin-bottom: 25px;
+        }
+        .features ul { list-style: none; padding: 0; }
+        .features li { margin-bottom: 12px; font-size: 0.9rem; }
+        .features li::before { content: "✓"; color: #3a86ff; margin-right: 10px; font-weight: bold; }
+        
+        .btn {
+            display: block;
+            background-color: #3a86ff;
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+            margin-bottom: 30px;
+        }
+        .btn:hover { background-color: #2a6fdb; }
+
+        .footer-info { border-top: 1px solid #415a77; padding-top: 20px; }
+        .risk-warning {
+            font-size: 0.75rem;
+            color: #e0e1dd; /* لون أوضح للتحذير للامتثال للقوانين */
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+        .links a {
+            color: #3a86ff;
+            text-decoration: none;
+            font-size: 0.8rem;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Structure Academy</h2>
+    <h1>Study Market Structure & Price Action Theory</h1>
+    
+    <p>Join our educational community to explore technical analysis concepts and market mechanics with like-minded learners.</p>
+
+    <div class="features">
+        <ul>
+            <li>Introduction to Price Action Theory</li>
+            <li>Educational Case Studies on Market Trends</li>
+            <li>Risk Management & Strategy Fundamentals</li>
+            <li>Weekly Economic Data Discussions</li>
+        </ul>
+    </div>
+
+    <a href="https://t.me/YOUR_CHANNEL" class="btn">JOIN THE LEARNING GROUP</a>
+
+    <div class="footer-info">
+        <p class="risk-warning">
+            <strong>Risk Warning:</strong> Trading financial markets involves significant risk to your capital. All content provided is for <strong>educational purposes only</strong> and does not constitute financial advice. Past performance is not indicative of future results. This site is not part of or affiliated with Meta Platforms, Inc.
+        </p>
+        <div class="links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
