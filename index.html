@@ -1,4 +1,71 @@
-<!DOCTYPE html>
+.feature-list li { margin-bottom: 12px; font-size: 0.95rem; display: flex; align-items: center; color: #e0e6ed; }
+        .feature-list li::before { content: "✓"; color: var(--accent-cyan); margin-right: 12px; font-weight: bold; }
+
+        .faq-item { background: rgba(0,0,0,0.2); padding: 15px; border-radius: 10px; margin-bottom: 15px; text-align: left; }
+        .faq-item strong { color: var(--accent-cyan); display: block; margin-bottom: 5px; font-size: 0.9°C; font-size: 0.9rem; }
+        .faq-item p { margin: 0; font-size: 0.85rem; color: #cbd5e0; } .footer { margin-top: 35px; padding-top: 25px; border-top: 1px solid rgba(255, 255, 255, 0.1); }
+        .risk-text { font-size: 0.75rem; color: #bdc3c7; line-height: 1.6; text-align: justify; margin-bottom: 20px; }
+        .footer-links { display: flex; justify-content: center; gap: 20px; }
+        .footer-links a { color: var(--primary-blue); text-decoration: none; font-size: 0.8rem; font-weight: 500; }
+    </style>
+</head>
+<body>
+
+    <div class="main-wrapper">
+        <div class="container">
+            <span class="logo-text">STRUCTURE ACADEMY</span>
+            <h1>High-Probability Price Action Mastery</h1>
+            
+            <div class="content-section">
+                <h2>About Our Mission</h2>
+                <p>"Master Price Action with institutional logic. Get the clarity you need to trade with confidence. Pure technical edge, no hype."
+                </p>
+            </div>
+
+            <a href="https://t.me/+bWpfDC7rZugwNWE0" target="_blank" rel="noopener noreferrer" class="cta-button" id="telegram-cta-btn">ACCESS FREE ANALYSIS</a>
+
+            <div class="feature-box">
+                <ul class="feature-list">
+                    <li>Institutional Price Action Insights</li>
+                    <li>Deep-Dive Market Case Studies</li>
+                    <li>Professional Risk & Strategic Planning</li>
+                    <li>Global Macro & Data Analysis</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>Why Choose Our Community?</h2>
+                <p>
+                    Unlike traditional signal groups, we prioritize logic and discipline. Our members explore the mechanics of market liquidity, structural shifts, and the psychological foundations of professional analysis.
+                </p>
+            </div>
+
+            <div class="content-section">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-item">
+                    <strong>Is this a financial advisory service?</strong>
+                    <p>No. We are a 100% educational academy. We do not provide trading signals, investment advice, or brokerage services.</p>
+                </div>
+                <div class="faq-item">
+                    <strong>What will I learn inside?</strong>
+                    <p>You will explore technical analysis theories, how to read market structure, and how to interpret economic data independently.</p>
+                </div>
+            </div>
+
+            <div class="footer">
+                <p class="risk-text">
+                    <strong>Risk Warning:</strong> Trading financial instruments involves significant risk and may result in the loss of your invested capital. All materials provided are for <strong>educational purposes only</strong> and do not constitute financial advice. Past performance is not indicative of future results. This site is not affiliated with Meta Platforms, Inc.
+                </p>
+                
+                <div class="footer-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="#contact">Contact Us</a>
+                </div>
+            </div> 
+            
+            <section id="contact" style="padding: 40px; text-align: center; background-color: #f4f7f6; color: #333; margin-top: 20px; border-radius: 10px;">
+                <h2 style="color: #003366;">Contact Us</h2><!DOCTYPE html>
 <html lang="en">
 <head>
     <script>
@@ -90,7 +157,7 @@
             font-size: 1.1rem;
             transition: all 0.3s ease;
             box-shadow: 0 4px 15px rgba(58, 134, 255, 0.3);
-            margin: 30px 0; /* مسافة حول الزر */
+            margin: 30px 0;
         }
 
         .cta-button:hover { transform: translateY(-2px); background: #2a6fdb; }
@@ -102,86 +169,54 @@
             text-align: left;
             margin: 25px 0;
             border-left: 3px solid var(--primary-blue);
+        } .feature-list { list-style: none; padding: 0; margin: 0; }<p>Reach out to us through our official channels:</p>
+                <div style="margin-top: 20px;">
+                    <p>📧 <strong>Email:</strong> <a href="mailto:structureacademys@gmail.com" style="color: #0056b3; text-decoration: none;">structureacademys@gmail.com</a></p>
+                    <p>💬 <strong>Messenger:</strong> <a href="https://m.me/markett.study.hub" style="color: #0056b3; text-decoration: none;">Chat with Us</a></p>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script>
+    document.getElementById('telegram-cta-btn').addEventListener('click', function() {
+        const pixelId = '1854246135238640'; 
+        const accessToken = 'EAANxMeXCtVABR1ZBO5TZAnK7beSZANfZCHfvPQKYpxhG5OERHVFsT95HPA5AKBdImjjckb8L1FufA2YYlknyCPlZACJBR1hZAm5aycal1ZBVLpGiP0wdZBF5PZAKZB7FLMigyIhFHwaqFH2uNr7WqzUGWL8fYG38HJiWmJZADyMLoFAUmSCVeVZAa8SKC7MUBQadrTHfkwZDZD';
+        
+        // توليد معرف حدث فريد لربط داتا المتصفح بداتا السيرفر وإلغاء التكرار
+        const eventId = 'tg_lead_' + Math.floor(Math.random() * 1000000);
+        const url = https://graph.facebook.com/v19.0/${pixelId}/events?access_token=${accessToken};
+
+        // إرسال كود بكسل المتصفح الموازي القياسي لإلغاء التكرار
+        if (typeof fbq !== 'undefined') {
+            fbq('track', 'Lead', {}, { eventID: eventId });
         }
 
-        .feature-list { list-style: none; padding: 0; margin: 0; }
-        .feature-list li { margin-bottom: 12px; font-size: 0.95rem; display: flex; align-items: center; color: #e0e6ed; }
-        .feature-list li::before { content: "✓"; color: var(--accent-cyan); margin-right: 12px; font-weight: bold; }
+        // تحضير وإرسال البيانات للـ API
+        const eventData = {
+            "data": [
+                {
+                    "event_name": "Lead",
+                    "event_time": Math.floor(Date.now() / 1000),
+                    "action_source": "website",
+                    "event_id": eventId,
+                    "user_data": {
+                        "client_user_agent": navigator.userAgent
+                    }
+                }
+            ]
+        };
 
-        .faq-item { background: rgba(0,0,0,0.2); padding: 15px; border-radius: 10px; margin-bottom: 15px; text-align: left; }
-        .faq-item strong { color: var(--accent-cyan); display: block; margin-bottom: 5px; font-size: 0.9rem; }
-        .faq-item p { margin: 0; font-size: 0.85rem; color: #cbd5e0; } .footer { margin-top: 35px; padding-top: 25px; border-top: 1px solid rgba(255, 255, 255, 0.1); }
-        .risk-text { font-size: 0.75rem; color: #bdc3c7; line-height: 1.6; text-align: justify; margin-bottom: 20px; }
-        .footer-links { display: flex; justify-content: center; gap: 20px; }
-        .footer-links a { color: var(--primary-blue); text-decoration: none; font-size: 0.8rem; font-weight: 500; }
-    </style>
-</head>
-<body>
-
-    <div class="main-wrapper">
-        <div class="container">
-            <span class="logo-text">STRUCTURE ACADEMY</span>
-            <h1>High-Probability Price Action Mastery</h1>
-            
-            <div class="content-section">
-                <h2>About Our Mission</h2>
-                <p>"Master Price Action with institutional logic. Get the clarity you need to trade with confidence. Pure technical edge, no hype."
-                </p>
-            </div>
-
-            <a href="https://t.me/+bWpfDC7rZugwNWE0" target="_blank" rel="noopener noreferrer" class="cta-button">ACCESS FREE ANALYSIS</a>
-
-            <div class="feature-box">
-                <ul class="feature-list">
-                    <li>Institutional Price Action Insights</li>
-                    <li>Deep-Dive Market Case Studies</li>
-                    <li>Professional Risk & Strategic Planning</li>
-                    <li>Global Macro & Data Analysis</li>
-                </ul>
-            </div>
-
-            <div class="content-section">
-                <h2>Why Choose Our Community?</h2>
-                <p>
-                    Unlike traditional signal groups, we prioritize logic and discipline. Our members explore the mechanics of market liquidity, structural shifts, and the psychological foundations of professional analysis.
-                </p>
-            </div>
-
-            <div class="content-section">
-                <h2>Frequently Asked Questions</h2>
-                <div class="faq-item">
-                    <strong>Is this a financial advisory service?</strong>
-                    <p>No. We are a 100% educational academy. We do not provide trading signals, investment advice, or brokerage services.</p>
-                </div>
-                <div class="faq-item">
-                    <strong>What will I learn inside?</strong>
-                    <p>You will explore technical analysis theories, how to read market structure, and how to interpret economic data independently.</p>
-                </div>
-            </div>
-
-            <div class="footer">
-                <p class="risk-text">
-                    <strong>Risk Warning:</strong> Trading financial instruments involves significant risk and may result in the loss of your invested capital. All materials provided are for <strong>educational purposes only</strong> and do not constitute financial advice. Past performance is not indicative of future results. This site is not affiliated with Meta Platforms, Inc.
-                </p>
-                
-                <div class="footer-links">
-            <a href="privacy.html">Privacy Policy</a>
-            <a href="terms.html">Terms of Service</a>
-            <a href="#contact">Contact Us</a>
-        </div>
-    </div>
-
-    <section id="contact" style="padding: 40px; text-align: center; background-color: #f4f7f6; color: #333; margin-top: 20px; border-radius: 10px;"><h2 style="color: #003366;">Contact Us</h2>
-        <p>Reach out to us through our official channels:</p>
-        <div style="margin-top: 20px;">
-            <p>📧 <strong>Email:</strong> <a href="mailto:structureacademys@gmail.com" style="color: #0056b3; text-decoration: none;">structureacademys@gmail.com</a></p>
-            <p>💬 <strong>Messenger:</strong> <a href="https://m.me/markett.study.hub" style="color: #0056b3; text-decoration: none;">Chat with Us</a></p>
-        </div>
-    </section>
-                </div>
-            </div>
-        </div>
-    </div>
+        fetch(url, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(eventData)
+        })
+        .then(response => response.json())
+        .then(data => console.log('Meta CAPI Success:', data))
+        .catch(error => console.error('Meta CAPI Error:', error));
+    });
+    </script>
 
 </body>
 </html>
