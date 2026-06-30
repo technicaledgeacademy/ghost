@@ -90,7 +90,7 @@
             font-size: 1.1rem;
             transition: all 0.3s ease;
             box-shadow: 0 4px 15px rgba(58, 134, 255, 0.3);
-            margin: 30px 0; /* مسافة حول الزر */
+            margin: 30px 0;
         }
 
         .cta-button:hover { transform: translateY(-2px); background: #2a6fdb; }
@@ -102,8 +102,7 @@
             text-align: left;
             margin: 25px 0;
             border-left: 3px solid var(--primary-blue);
-        }.feature-list { list-style: none; padding: 0; margin: 0; }
-        .feature-list li { margin-bottom: 12px; font-size: 0.95rem; display: flex; align-items: center; color: #e0e6ed; }
+        } .feature-list { list-style: none; padding: 0; margin: 0; }.feature-list li { margin-bottom: 12px; font-size: 0.95rem; display: flex; align-items: center; color: #e0e6ed; }
         .feature-list li::before { content: "✓"; color: var(--accent-cyan); margin-right: 12px; font-weight: bold; }
 
         .faq-item { background: rgba(0,0,0,0.2); padding: 15px; border-radius: 10px; margin-bottom: 15px; text-align: left; }
@@ -127,7 +126,7 @@
                 </p>
             </div>
 
-            <a href="https://t.me/+bWpfDC7rZugwNWE0" target="_blank" rel="noopener noreferrer" class="cta-button">ACCESS FREE ANALYSIS</a>
+            <a href="https://t.me/+bWpfDC7rZugwNWE0" target="_blank" rel="noopener noreferrer" class="cta-button" id="telegram-cta-btn">ACCESS FREE ANALYSIS</a>
 
             <div class="feature-box">
                 <ul class="feature-list">
@@ -163,21 +162,58 @@
                 </p>
                 
                 <div class="footer-links">
-            <a href="privacy.html">Privacy Policy</a>
-            <a href="terms.html">Terms of Service</a>
-            <a href="#contact">Contact Us</a>
-        </div>
-    </div><section id="contact" style="padding: 40px; text-align: center; background-color: #f4f7f6; color: #333; margin-top: 20px; border-radius: 10px;"><h2 style="color: #003366;">Contact Us</h2>
-        <p>Reach out to us through our official channels:</p>
-        <div style="margin-top: 20px;">
-            <p>📧 <strong>Email:</strong> <a href="mailto:structureacademys@gmail.com" style="color: #0056b3; text-decoration: none;">structureacademys@gmail.com</a></p>
-            <p>💬 <strong>Messenger:</strong> <a href="https://m.me/markett.study.hub" style="color: #0056b3; text-decoration: none;">Chat with Us</a></p>
-        </div>
-    </section>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="#contact">Contact Us</a>
                 </div>
-            </div>
+            </div> 
+            
+            <section id="contact" style="padding: 40px; text-align: center; background-color: #f4f7f6; color: #333; margin-top: 20px; border-radius: 10px;">
+                <h2 style="color: #003366;">Contact Us</h2>
+                <p>Reach out to us through our official channels:</p><div style="margin-top: 20px;">
+                    <p>📧 <strong>Email:</strong> <a href="mailto:structureacademys@gmail.com" style="color: #0056b3; text-decoration: none;">structureacademys@gmail.com</a></p>
+                    <p>💬 <strong>Messenger:</strong> <a href="https://m.me/markett.study.hub" style="color: #0056b3; text-decoration: none;">Chat with Us</a></p>
+                </div>
+            </section>
         </div>
     </div>
+
+    <script>
+    document.getElementById('telegram-cta-btn').addEventListener('click', function() {
+        const pixelId = '1516702396543940'; 
+        const accessToken = 'EAANxMeXCtVABR1ZBO5TZAnK7beSZANfZCHfvPQKYpxhG5OERHVFsT95HPA5AKBdImjjckb8L1FufA2YYlknyCPlZACJBR1hZAm5aycal1ZBVLpGiP0wdZBF5PZAKZB7FLMigyIhFHwaqFH2uNr7WqzUGWL8fYG38HJiWmJZADyMLoFAUmSCVeVZAa8SKC7MUBQadrTHfkwZDZD';
+        
+        const eventId = 'tg_lead_' + Math.floor(Math.random() * 1000000);
+        const url = https://graph.facebook.com/v19.0/${pixelId}/events?access_token=${accessToken};
+
+        if (typeof fbq !== 'undefined') {
+            fbq('track', 'Lead', {}, { eventID: eventId });
+        }
+
+        const eventData = {
+            "data": [
+                {
+                    "event_name": "Lead",
+                    "event_time": Math.floor(Date.now() / 1000),
+                    "action_source": "website",
+                    "event_id": eventId,
+                    "user_data": {
+                        "client_user_agent": navigator.userAgent
+                    }
+                }
+            ]
+        };
+
+        fetch(url, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(eventData)
+        })
+        .then(response => response.json())
+        .then(data => console.log('Meta CAPI Success:', data))
+        .catch(error => console.error('Meta CAPI Error:', error));
+    });
+    </script>
 
 </body>
 </html>
